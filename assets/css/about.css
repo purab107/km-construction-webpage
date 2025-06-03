@@ -1,0 +1,120 @@
+/* -----------------------------
+   Transparent Navbar Styling
+------------------------------ */
+
+#navbar {
+  background-color: transparent; /* Initial transparent navbar */
+  transition: background-color 0.5s ease; /* Smooth transition on scroll */
+  padding: 12px 0; /* Vertical padding */
+  z-index: 10; /* Keeps navbar above other elements */
+}
+
+.navbar-brand {
+  font-family: 'Segoe UI', sans-serif; /* Brand font */
+  font-weight: bold; /* Bold text for logo/brand name */
+  font-size: 2rem; /* Large font size for branding */
+}
+
+.navbar-brand,
+.navbar .nav-link {
+  color: white !important; /* White text color */
+  font-weight: 500; /* Medium-bold weight */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+  font-family: 'Segoe UI', sans-serif; /* Consistent font for links and brand */
+}
+
+/* Change link and brand color to orange on hover */
+.navbar .nav-link:hover,
+.navbar-brand:hover {
+  color: orange !important;
+}
+
+/* Change navbar background when scrolled */
+#navbar.scrolled {
+  background-color: rgb(0, 1, 18); /* Dark navy background after scroll */
+}
+
+/* -----------------------------
+   Navbar Link Underline Animation
+------------------------------ */
+
+/* Base styles for navbar links */
+#navbar .nav-link {
+  position: relative; /* Needed for pseudo-element positioning */
+  display: inline-block; /* Inline but allows block-level styling */
+  color: white !important; /* Default white text */
+  transition: color 0.3s ease; /* Smooth color change */
+}
+
+/* Underline effect (hidden initially) */
+#navbar .nav-link::after {
+  content: ''; /* Empty pseudo-element for underline */
+  position: absolute;
+  bottom: -4px; /* Position underline slightly below text */
+  left: 0;
+  height: 2px; /* Thickness of underline */
+  width: 0%; /* Hidden initially */
+  background-color: currentColor; /* Matches text color */
+  transition: width 0.3s ease; /* Smooth width change */
+}
+
+/* Show underline on hover */
+#navbar .nav-link:hover::after {
+  width: 100%; /* Full width underline appears */
+}
+
+/* Ensures text also turns orange on hover (in case missed above) */
+#navbar .nav-link:hover {
+  color: orange !important;
+}
+
+nav#navbar ul li a.special-link {
+  color: orange !important;
+  font-weight: bold !important;
+}
+
+/* Keep underline always visible for .special-link */
+.navbar .nav-link.special-link::after {
+  width: 100% !important;       /* Always show underline */
+  background-color: orange !important;  /* Match the orange color */
+}
+
+
+
+
+/* -----------------------------
+   Footer and Section Backgrounds
+------------------------------ */
+
+footer {
+  background-color: rgb(0, 1, 18); /* Consistent dark theme */
+}
+
+.quick-links ul li a{
+    color: white;
+}
+
+.quick-links ul li a:hover{
+    color: orange;
+}
+
+
+/*---------------------------
+  Hero section for about us
+-----------------------------*/
+
+.parallax{
+    background-image: url("../images/Carousal1.jpg");
+    height: 60vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
