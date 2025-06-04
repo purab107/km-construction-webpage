@@ -169,3 +169,8 @@ nav#navbar ul li a.special-link {
 footer{
     background-color: rgb(0, 1, 18);
 }
+
+
+.button-submit:hover{
+  background-color: rgb(0, 1, 18) !important;
+}

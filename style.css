@@ -122,7 +122,9 @@
 
 .services-section .card:hover {
   transform: translateY(-5px); /* Lift card slightly on hover */
-  background-color: white; /* Light background on hover */
+  background-color: rgb(255, 254, 251); /* Light background on hover */
+  cursor: pointer;
+
 }
 
 /* -----------------------------
