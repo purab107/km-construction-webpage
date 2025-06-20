@@ -74,7 +74,7 @@
 
 .hero-section {
   height: 100vh; /* Full viewport height */
-  background: url('assets/images/hero1.jpg') no-repeat center center/cover; /* Responsive background image */
+  background: url('https://ik.imagekit.io/pritipri/KM%20Construction%20Media/hero1.jpg?updatedAt=1749145253603') no-repeat center center/cover; /* Responsive background image */
   padding-top: 100px; /* Push content below navbar */
 }
 
@@ -303,5 +303,4 @@ footer {
 .service-card:hover .img-zoom-container img {
   transform: scale(1.1);
 }
-
 
