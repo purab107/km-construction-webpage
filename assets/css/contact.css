@@ -1,4 +1,17 @@
-/* Transparent Navbar */
+/* -----------------------------
+   Global Styles
+------------------------------ */
+
+html, body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+
+/* -----------------------------
+   Navbar
+------------------------------ */
+
 #navbar {
   background-color: rgb(0, 1, 18);
   transition: background-color 0.5s ease;
@@ -6,48 +19,42 @@
   z-index: 10;
 }
 
-.navbar-brand{
-    font-family: 'Segoe UI', sans-serif;
-    font-weight: bold;
-    font-size: 2rem;
+#navbar.scrolled {
+  background-color: rgb(0, 1, 18);
 }
 
-.navbar-brand,
-.navbar .nav-link {
-  color: white !important;
-  font-weight: 500;
-  transition: color 0.3s ease;
+.navbar-brand {
   font-family: 'Segoe UI', sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  color: white !important;
+  transition: color 0.3s ease;
 }
 
-/* Hover turns orange */
+.navbar .nav-link {
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 500;
+  color: white !important;
+  transition: color 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.navbar .nav-item {
+  color: orange;
+}
+
+/* Hover Effects */
 .navbar .nav-link:hover,
 .navbar-brand:hover {
   color: orange !important;
 }
 
-.navbar .nav-item{
-    color: orange;
-}
-/* Scrolled Navbar */
-#navbar.scrolled {
-  background-color: rgb(0, 1, 18);
-}
-
-
-/* Navbar Link Underline Animation */
-#navbar .nav-link {
-  position: relative;
-  display: inline-block;
-  color: white !important;
-  transition: color 0.3s ease;
-}
-
-/* Hover underline animation */
-#navbar .nav-link::after {
+/* Underline Animation */
+.navbar .nav-link::after {
   content: '';
   position: absolute;
-  bottom: -4px; /* Adjust as needed */
+  bottom: -4px;
   left: 0;
   height: 2px;
   width: 0%;
@@ -55,46 +62,46 @@
   transition: width 0.3s ease;
 }
 
-#navbar .nav-link:hover::after {
+.navbar .nav-link:hover::after {
   width: 100%;
 }
 
-/* Change text to orange on hover (already included, but shown here for clarity) */
-#navbar .nav-link:hover {
-  color: orange !important;
-}
-
+/* Special Links */
 nav#navbar ul li a.special-link {
   color: orange !important;
   font-weight: bold !important;
 }
 
-/* Keep underline always visible for .special-link */
 .navbar .nav-link.special-link::after {
-  width: 100% !important;       /* Always show underline */
-  background-color: orange !important;  /* Match the orange color */
+  width: 100% !important;
+  background-color: orange !important;
 }
+
+/* -----------------------------
+   Hero Section
+------------------------------ */
 
 .contact-us-hero {
   padding: 60px 40px;
-  /* background: linear-gradient(to right, #ffffff, #f4f5f7); */
   background-color: rgb(248, 248, 255);
   margin-top: 40px;
   min-height: 100vh;
   color: rgb(0, 1, 18);
 }
 
-.contact-us-hero h1{
-    margin-top: 0px;
+.contact-us-hero h1 {
+  margin-top: 0;
 }
 
-/* Contact Info Section */
+/* -----------------------------
+   Contact Info
+------------------------------ */
+
 .contact-info ul {
   list-style: none;
   padding: 0;
   margin: 30px 0 0;
 }
-
 
 .contact-info li {
   display: flex;
@@ -121,7 +128,10 @@ nav#navbar ul li a.special-link {
   text-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
-/* Form Section */
+/* -----------------------------
+   Contact Form
+------------------------------ */
+
 .submit-form {
   background: #ffffff;
   padding: 30px;
@@ -161,76 +171,71 @@ nav#navbar ul li a.special-link {
   background-color: #0056b3;
 }
 
+/* -----------------------------
+   Map Section
+------------------------------ */
+
 .map {
-    width: 650px;
-    margin-top: 40px;
+  width: 650px;
+  margin-top: 40px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
-footer{
-    background-color: rgb(0, 1, 18);
+/* -----------------------------
+   Footer & Quick Links
+------------------------------ */
+
+footer {
+  background-color: rgb(0, 1, 18);
 }
 
+.quick-links ul li a {
+  color: white;
+}
 
-.button-submit:hover{
+.quick-links ul li a:hover {
+  color: orange;
+}
+
+.button-submit:hover {
   background-color: rgb(0, 1, 18) !important;
 }
 
-/* FAQ Section */
-.faq-section {
+/* -----------------------------
+   FAQ Section
+------------------------------ */
+
+.faq-section,
+.faq-body {
   background-color: rgb(0, 1, 18);
 }
 
-.faq-body{
-  background-color: rgb(0, 1, 18);
+.faq-body {
+  width: 1000px;
+  border-bottom: 1px solid white;
 }
 
-/* .accordion-item{
-  background-color: rgb(0, 1, 18);
+.accordion-header {
+  text-align: center;
 }
 
-.accordion-header{
-  background-color: rgb(0, 1, 18);
-
-}
-
-.accordion-button{
-  background-color: rgb(0, 1, 18);
-}
-
-.accordion-button:focus {
-    outline: none;
-    box-shadow: none;
-} */
-
-
-/* Custom dark background */
+/* Accordion Styling */
 .dark-accordion,
 .dark-accordion-btn {
-    background-color: rgb(0, 1, 18);
-    color: white;
-    border: none;
+  background-color: rgb(0, 1, 18);
+  color: white;
+  border: none;
 }
 
-/* Remove blue outline, glow, and Bootstrap active styles */
 .dark-accordion-btn:focus,
 .dark-accordion-btn:active,
 .dark-accordion-btn:focus-visible {
-    outline: none !important;
-    box-shadow: none !important;
-    background-color: rgb(0, 1, 18) !important;
-    color: white !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: rgb(0, 1, 18) !important;
+  color: white !important;
 }
 
-.accordion-header{
-  text-align: center;
-}
-/* Optional: remove transition border if needed */
 .accordion-button::after {
-    filter: invert(1); /* makes the arrow icon white */
-}
-
-.faq-body{
-  width: 1000px;
-  border-bottom: 1px solid white;
+  filter: invert(1);
 }

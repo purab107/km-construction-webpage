@@ -1,4 +1,17 @@
-/* Transparent Navbar */
+/* -----------------------------
+   Global Styles
+------------------------------ */
+
+html, body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+
+/* -----------------------------
+   Navbar
+------------------------------ */
+
 #navbar {
   background-color: rgb(0, 1, 18);
   transition: background-color 0.5s ease;
@@ -6,62 +19,55 @@
   z-index: 10;
 }
 
-.navbar-brand{
-    font-family: 'Segoe UI', sans-serif;
-    font-weight: bold;
-    font-size: 2rem;
+#navbar.scrolled {
+  background-color: rgb(0, 1, 18);
 }
 
-.navbar-brand,
-.navbar .nav-link {
-  color: white !important;
-  font-weight: 500;
-  transition: color 0.3s ease;
+.navbar-brand {
   font-family: 'Segoe UI', sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  color: white !important;
+  transition: color 0.3s ease;
 }
 
-/* Hover turns orange */
+.navbar .nav-link {
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 500;
+  color: white !important;
+  transition: color 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
 .navbar .nav-link:hover,
 .navbar-brand:hover {
   color: orange !important;
 }
 
-.navbar .nav-item{
-    color: orange;
-}
-/* Scrolled Navbar */
-#navbar.scrolled {
-  background-color: rgb(0, 1, 18);
-}
-
-
-/* Navbar Link Underline Animation */
-#navbar .nav-link {
-  position: relative;
-  display: inline-block;
-  color: white !important;
-  transition: color 0.3s ease;
-}
-
-/* Hover underline animation */
-#navbar .nav-link::after {
+/* Underline Animation */
+.navbar .nav-link::after {
   content: '';
   position: absolute;
-  bottom: -4px; /* Adjust as needed */
+  bottom: -4px;
   left: 0;
   height: 2px;
-  width: 0%;
+  width: 0;
   background-color: currentColor;
   transition: width 0.3s ease;
 }
 
-#navbar .nav-link:hover::after {
+.navbar .nav-link:hover::after {
   width: 100%;
 }
 
-/* Change text to orange on hover (already included, but shown here for clarity) */
-#navbar .nav-link:hover {
-  color: orange !important;
+.navbar .nav-link.special-link::after {
+  width: 100% !important;
+  background-color: orange !important;
+}
+
+.navbar .nav-item {
+  color: orange;
 }
 
 nav#navbar ul li a.special-link {
@@ -69,116 +75,151 @@ nav#navbar ul li a.special-link {
   font-weight: bold !important;
 }
 
-/* Keep underline always visible for .special-link */
-.navbar .nav-link.special-link::after {
-  width: 100% !important;       /* Always show underline */
-  background-color: orange !important;  /* Match the orange color */
-}
-
-
 
 /* -----------------------------
-   Footer and Section Backgrounds
+   Footer & Quick Links
 ------------------------------ */
 
 footer {
-  background-color: rgb(0, 1, 18); /* Consistent dark theme */
+  background-color: rgb(0, 1, 18);
 }
 
-.quick-links ul li a{
-    color: white;
+.quick-links ul li a {
+  color: white;
 }
 
-.quick-links ul li a:hover{
-    color: orange;
+.quick-links ul li a:hover {
+  color: orange;
 }
-
-/* -----------------------------
-   Policy Link Section
------------------------------- */
 
 .policy-links {
-  text-align: center; /* Center-align text */
-}
-
-/* FAQ Section */
-.faq-section {
-  background-color: rgb(0, 1, 18);
-}
-
-.faq-body{
-  background-color: rgb(0, 1, 18);
-}
-
-/* .accordion-item{
-  background-color: rgb(0, 1, 18);
-}
-
-.accordion-header{
-  background-color: rgb(0, 1, 18);
-
-}
-
-.accordion-button{
-  background-color: rgb(0, 1, 18);
-}
-
-.accordion-button:focus {
-    outline: none;
-    box-shadow: none;
-} */
-
-
-/* Custom dark background */
-.dark-accordion,
-.dark-accordion-btn {
-    background-color: rgb(0, 1, 18);
-    color: white;
-    border: none;
-}
-
-/* Remove blue outline, glow, and Bootstrap active styles */
-.dark-accordion-btn:focus,
-.dark-accordion-btn:active,
-.dark-accordion-btn:focus-visible {
-    outline: none !important;
-    box-shadow: none !important;
-    background-color: rgb(0, 1, 18) !important;
-    color: white !important;
-}
-
-.accordion-header{
   text-align: center;
 }
-/* Optional: remove transition border if needed */
-.accordion-button::after {
-    filter: invert(1); /* makes the arrow icon white */
+
+
+/* -----------------------------
+   FAQ Section
+------------------------------ */
+
+.faq-section,
+.faq-body {
+  background-color: rgb(0, 1, 18);
 }
 
-.faq-body{
+.faq-body {
   width: 1000px;
   border-bottom: 1px solid white;
 }
 
-.quick-links ul li a{
+.accordion-header {
+  text-align: center;
+}
+
+.dark-accordion,
+.dark-accordion-btn {
+  background-color: rgb(0, 1, 18);
   color: white;
+  border: none;
 }
 
-.quick-links ul li a:hover{
-    color: orange;
+.dark-accordion-btn:focus,
+.dark-accordion-btn:active,
+.dark-accordion-btn:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: rgb(0, 1, 18) !important;
+  color: white !important;
 }
 
+.accordion-button::after {
+  filter: invert(1);
+}
+
+
+/* -----------------------------
+   Image Zoom Effect
+------------------------------ */
 
 .img-zoom-container {
   overflow: hidden;
+  display: inline-block;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .img-zoom-container img {
   transition: transform 0.4s ease;
 }
 
-.service-card:hover .img-zoom-container img {
+.img-zoom-container:hover img {
   transform: scale(1.1);
 }
 
 
+/* -----------------------------
+   Services Section
+------------------------------ */
+
+.services-section {
+  background-color: rgb(248, 248, 255);
+}
+
+.services-section img {
+  transition: transform 0.3s ease;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.services-section h3 {
+  font-size: 1.75rem;
+}
+
+.services-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+
+/* -----------------------------
+   Parallax Section
+------------------------------ */
+
+.parallax {
+  background-image: url("https://ik.imagekit.io/pritipri/KM%20Construction%20Media/Carousal1.jpg?updatedAt=1749145254120");
+  height: 60vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.parallax-text {
+  z-index: 3;
+  text-align: center;
+  margin-top: 90px;
+}
+
+.service-header,
+#contact-us {
+  z-index: 3;
+}
+
+
+/* -----------------------------
+   Global
+------------------------------ */
+
+body {
+  overflow-x: hidden;
+}
+
+.hero-section-services {
+  margin-top: 100px;
+  padding-bottom: 100px;
+}

@@ -1,302 +1,269 @@
 /* -----------------------------
-   Transparent Navbar Styling
+   Global Styles
+------------------------------ */
+
+html, body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+
+/* -----------------------------
+   Navbar Styles
 ------------------------------ */
 
 #navbar {
-  background-color: transparent; /* Initial transparent navbar */
-  transition: background-color 0.5s ease; /* Smooth transition on scroll */
-  padding: 12px 0; /* Vertical padding */
-  z-index: 10; /* Keeps navbar above other elements */
+  background-color: transparent;
+  transition: background-color 0.5s ease;
+  padding: 12px 0;
+  z-index: 10;
+}
+
+#navbar.scrolled {
+  background-color: rgb(0, 1, 18);
 }
 
 .navbar-brand {
-  font-family: 'Segoe UI', sans-serif; /* Brand font */
-  font-weight: bold; /* Bold text for logo/brand name */
-  font-size: 2rem; /* Large font size for branding */
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  color: white !important;
+  transition: color 0.3s ease;
 }
 
-.navbar-brand,
 .navbar .nav-link {
-  color: white !important; /* White text color */
-  font-weight: 500; /* Medium-bold weight */
-  transition: color 0.3s ease; /* Smooth color transition on hover */
-  font-family: 'Segoe UI', sans-serif; /* Consistent font for links and brand */
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 500;
+  color: white !important;
+  transition: color 0.3s ease;
+  position: relative;
+  display: inline-block;
 }
 
-/* Change link and brand color to orange on hover */
 .navbar .nav-link:hover,
 .navbar-brand:hover {
   color: orange !important;
 }
 
-/* Change navbar background when scrolled */
-#navbar.scrolled {
-  background-color: rgb(0, 1, 18); /* Dark navy background after scroll */
-}
-
-/* -----------------------------
-   Navbar Link Underline Animation
------------------------------- */
-
-/* Base styles for navbar links */
-#navbar .nav-link {
-  position: relative; /* Needed for pseudo-element positioning */
-  display: inline-block; /* Inline but allows block-level styling */
-  color: white !important; /* Default white text */
-  transition: color 0.3s ease; /* Smooth color change */
-}
-
-/* Underline effect (hidden initially) */
-#navbar .nav-link::after {
-  content: ''; /* Empty pseudo-element for underline */
+.navbar .nav-link::after {
+  content: '';
   position: absolute;
-  bottom: -4px; /* Position underline slightly below text */
+  bottom: -4px;
   left: 0;
-  height: 2px; /* Thickness of underline */
-  width: 0%; /* Hidden initially */
-  background-color: currentColor; /* Matches text color */
-  transition: width 0.3s ease; /* Smooth width change */
+  height: 2px;
+  width: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease;
 }
 
-/* Show underline on hover */
-#navbar .nav-link:hover::after {
-  width: 100%; /* Full width underline appears */
+.navbar .nav-link:hover::after {
+  width: 100%;
 }
 
-/* Ensures text also turns orange on hover (in case missed above) */
-#navbar .nav-link:hover {
-  color: orange !important;
-}
 
 /* -----------------------------
-   Hero Section Styling
+   Hero Section
 ------------------------------ */
 
 .hero-section {
-  height: 100vh; /* Full viewport height */
-  background: url('https://ik.imagekit.io/pritipri/KM%20Construction%20Media/hero1.jpg?updatedAt=1749145253603') no-repeat center center/cover; /* Responsive background image */
-  padding-top: 100px; /* Push content below navbar */
+  height: 100vh;
+  background: url('https://ik.imagekit.io/pritipri/KM%20Construction%20Media/hero1.jpg?updatedAt=1749145253603') no-repeat center center/cover;
+  padding-top: 100px;
 }
 
-/* Headline in hero section */
 .text-column h1 {
-  font-size: 3rem; /* Large heading text */
-  line-height: 1.2; /* Spacing between lines */
+  font-size: 3rem;
+  line-height: 1.2;
 }
 
-/* Paragraph in hero section */
 .text-column p {
-  font-size: 1.25rem; /* Readable font size */
-  color: #ccc; /* Light gray color for contrast */
+  font-size: 1.25rem;
+  color: #ccc;
 }
+
 
 /* -----------------------------
-   Carousel Styling
+   Carousel
 ------------------------------ */
 
 .carousel-box {
-  background-color: #1c1c1c; /* Dark background for slides */
-  color: white; /* White text */
-  border-radius: 10px; /* Rounded corners */
-  padding: 3rem; /* Internal spacing */
-  height: 300px; /* Fixed height */
-  display: flex; /* Center content */
-  align-items: center; /* Vertically center content */
-  justify-content: center; /* Horizontally center content */
-  font-size: 1.2rem; /* Font size */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Subtle shadow */
-  transition: all 0.5s ease; /* Smooth hover/resize transition */
+  background-color: #1c1c1c;
+  color: white;
+  border-radius: 10px;
+  padding: 3rem;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease;
 }
 
 .carousel-inner {
-  border-radius: 12px; /* Rounded inner carousel corners */
+  border-radius: 12px;
 }
 
+
 /* -----------------------------
-   Services Section Card Styling
+   Services Section
 ------------------------------ */
 
-.services-section{
+.services-section {
   background-color: rgb(248, 248, 255);
 }
 
 .services-section .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  transition: transform 0.3s ease; /* Smooth hover animation */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+              0 6px 20px rgba(0, 0, 0, 0.19);
+  transition: transform 0.3s ease;
 }
 
 .services-section .card:hover {
-  transform: translateY(-5px); /* Lift card slightly on hover */
-  background-color: rgb(255, 254, 251); /* Light background on hover */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: translateY(-5px);
+  background-color: rgb(255, 254, 251);
   cursor: pointer;
-
 }
 
+
 /* -----------------------------
-   Project Card Styling
+   Project Cards
 ------------------------------ */
 
 .project-card {
-  transition: transform 0.3s; /* Smooth scaling effect */
+  transition: transform 0.3s ease;
 }
 
 .project-card:hover {
-  transform: scale(1.02); /* Slight zoom on hover */
+  transform: scale(1.02);
 }
 
-/* Overlay for project card (appears on hover) */
 .project-overlay {
-  position: absolute; /* Covers entire card */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
-  opacity: 0; /* Hidden by default */
-  transition: opacity 0.3s ease; /* Fade-in effect */
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-/* Show overlay when card is hovered */
 .project-card:hover .project-overlay {
   opacity: 1;
 }
 
-/* Container for project image */
 .project-img-wrapper {
-  height: 230px; /* Fixed height for image */
-  overflow: hidden; /* Crop any overflow */
+  height: 230px;
+  overflow: hidden;
 }
 
-/* Project image inside wrapper */
 .project-img-wrapper img {
-  width: 100%; /* Fill width */
-  height: 100%; /* Fill height */
-  object-fit: cover; /* Maintain aspect ratio, cover area */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
 
 /* -----------------------------
-   About Us Section Text Styling
+   About Us Cards
 ------------------------------ */
 
 #about-us .card-body h6 {
-  font-size: 1.1rem; /* Heading size in about cards */
+  font-size: 1.1rem;
 }
 
 #about-us .card-body p {
-  font-size: 0.9rem; /* Paragraph text in about cards */
+  font-size: 0.9rem;
 }
+
 
 /* -----------------------------
-   Footer and Section Backgrounds
+   Footer and Sections
 ------------------------------ */
 
-footer {
-  background-color: rgb(0, 1, 18); /* Consistent dark theme */
+footer,
+#contact-us,
+#projects,
+.faq-section,
+.faq-body {
+  background-color: rgb(0, 1, 18);
 }
-
-#contact-us {
-  background-color: rgb(0, 1, 18); /* Same dark background */
-}
-
-#projects {
-  background-color: rgb(0, 1, 18); /* Same dark background */
-}
-
-/* -----------------------------
-   Contact Section Text and Button
------------------------------- */
 
 #contact-us h2 {
-  color: #fff; /* White heading */
+  color: #fff;
 }
 
 #contact-us p {
-  color: #ccc; /* Light gray subtext */
+  color: #ccc;
 }
 
-/* Hover style for contact button */
 #contact-us .btn-outline-light:hover {
-  background-color: orange; /* Fill with orange */
-  border-color: orange; /* Change border to orange */
-  color: black; /* Text turns black for contrast */
+  background-color: orange;
+  border-color: orange;
+  color: black;
 }
+
 
 /* -----------------------------
-   Policy Link Section
+   Policy Links
 ------------------------------ */
 
 .policy-links {
-  text-align: center; /* Center-align text */
-}
-
-/* FAQ Section */
-.faq-section {
-  background-color: rgb(0, 1, 18);
-}
-
-.faq-body{
-  background-color: rgb(0, 1, 18);
-}
-
-/* .accordion-item{
-  background-color: rgb(0, 1, 18);
-}
-
-.accordion-header{
-  background-color: rgb(0, 1, 18);
-
-}
-
-.accordion-button{
-  background-color: rgb(0, 1, 18);
-}
-
-.accordion-button:focus {
-    outline: none;
-    box-shadow: none;
-} */
-
-
-/* Custom dark background */
-.dark-accordion,
-.dark-accordion-btn {
-    background-color: rgb(0, 1, 18);
-    color: white;
-    border: none;
-}
-
-/* Remove blue outline, glow, and Bootstrap active styles */
-.dark-accordion-btn:focus,
-.dark-accordion-btn:active,
-.dark-accordion-btn:focus-visible {
-    outline: none !important;
-    box-shadow: none !important;
-    background-color: rgb(0, 1, 18) !important;
-    color: white !important;
-}
-
-.accordion-header{
   text-align: center;
 }
-/* Optional: remove transition border if needed */
-.accordion-button::after {
-    filter: invert(1); /* makes the arrow icon white */
-}
 
-.faq-body{
+
+/* -----------------------------
+   FAQ Styling
+------------------------------ */
+
+.faq-body {
   width: 1000px;
   border-bottom: 1px solid white;
 }
 
-.quick-links ul li a{
+.accordion-header {
+  text-align: center;
+}
+
+.dark-accordion,
+.dark-accordion-btn {
+  background-color: rgb(0, 1, 18);
+  color: white;
+  border: none;
+}
+
+.dark-accordion-btn:focus,
+.dark-accordion-btn:active,
+.dark-accordion-btn:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: rgb(0, 1, 18) !important;
+  color: white !important;
+}
+
+.accordion-button::after {
+  filter: invert(1);
+}
+
+
+/* -----------------------------
+   Quick Links
+------------------------------ */
+
+.quick-links ul li a {
   color: white;
 }
 
-.quick-links ul li a:hover{
-    color: orange;
+.quick-links ul li a:hover {
+  color: orange;
 }
 
+
+/* -----------------------------
+   Image Zoom
+------------------------------ */
 
 .img-zoom-container {
   overflow: hidden;
@@ -310,30 +277,40 @@ footer {
   transform: scale(1.1);
 }
 
+
+/* -----------------------------
+   WhatsApp Floating Button
+------------------------------ */
+
 .whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: #25d366;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    transition: transform 0.3s ease;
-    text-decoration: none;
-  }
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
 
-  .whatsapp-float:hover {
-    transform: scale(1.1);
-  }
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
 
-  .whatsapp-float svg {
-    display: block;
-  }
+.whatsapp-float svg {
+  display: block;
+}
+
+
+/* -----------------------------
+   Fade-In Animation Section
+------------------------------ */
 
 .fade-section {
   opacity: 0;
@@ -343,8 +320,4 @@ footer {
 
 .fade-section.visible {
   opacity: 1;
-}
-
-html{
-  scroll-behavior:smooth;
 }

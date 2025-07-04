@@ -1,0 +1,41 @@
+.policy-links {
+  text-align: center;
+}
+
+.faq-section,
+.faq-body,
+.dark-accordion,
+.dark-accordion-btn {
+  background-color: rgb(0, 1, 18);
+  color: white;
+}
+
+.dark-accordion-btn:focus,
+.dark-accordion-btn:active,
+.dark-accordion-btn:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: rgb(0, 1, 18) !important;
+  color: white !important;
+}
+
+.accordion-header {
+  text-align: center;
+}
+
+.accordion-button::after {
+  filter: invert(1);
+}
+
+.faq-body {
+  width: 1000px;
+  border-bottom: 1px solid white;
+}
+
+.quick-links ul li a {
+  color: white;
+}
+
+.quick-links ul li a:hover {
+  color: orange;
+}

@@ -19,47 +19,73 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
 </head>
 
 <body>
 
     <!-- WhatsApp Button -->
     <a href="https://wa.me/919131154067?text=Hello%2C%20I'm%20interested%20in%20your%20services!" target="_blank"
-        style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; font-size: 24px; background: #25D366; padding: 12px; border-radius: 50%; color: white;" class="whatsapp-float">
+        style="position: fixed; bottom: 50px; right: 30px; z-index: 1000; font-size: 24px; background: #25D366; padding: 12px; border-radius: 50%; color: white;"
+        class="whatsapp-float">
         <i class="bi bi-whatsapp"></i>
     </a>
     <!-- Navbar -->
-    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top ">
         <div class="container">
-            <a class="navbar-brand" href="#">KM Construction</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <!-- Brand -->
+            <a class="navbar-brand fw-bold" href="#">KM Construction</a>
+
+            <!-- Toggler for mobile -->
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Collapsible Menu -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/contact.html">Contact</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="pages/services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="pages/projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="pages/about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="pages/contact.html">Contact</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+
     <!-- Hero Section -->
-    <section class="hero-section d-flex align-items-center text-white fade-section">
+    <section class="hero-section d-flex align-items-center text-white   py-5">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center gy-4">
+
                 <!-- Left Column -->
-                <div class="col-md-6 text-column">
-                    <h1 class="display-4 fw-bold text-white">Build Anything.<br>Anywhere.</h1>
-                    <p class="lead text-light">Craft exceptional spaces and structures with KM Construction<br>— modern
-                        design, expert execution, no compromises.</p>
-                    <a href="pages/contact.html" class="btn btn-outline-light">Get Started</a>
+                <div class="col-lg-6 col-md-12 text-center text-lg-start" data-aos="fade-right">
+                    <h1 class="display-5 fw-bold text-white">Build Anything.<br>Anywhere.</h1>
+                    <p class="lead text-light">
+                        Craft exceptional spaces and structures with KM Construction<br>
+                        — modern design, expert execution, no compromises.
+                    </p>
+                    <a href="pages/contact.html" class="btn btn-outline-light mt-3">Get Started</a>
                 </div>
+
                 <!-- Right Column: Carousel -->
-                <div class="col-md-6">
+                <div class="col-lg-6 col-md-12" data-aos="fade-left">
                     <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner shadow rounded-3">
 
@@ -96,10 +122,9 @@
                                     <p class="text-light">Transforming landscapes with style and strength.</p>
                                 </div>
                             </div>
-
                         </div>
 
-                        <!-- Optional carousel controls -->
+                        <!-- Carousel Controls -->
                         <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel"
                             data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -117,273 +142,284 @@
         </div>
     </section>
 
+
     <!-- Services Section -->
-    <section class="services-section py-5 text-dark fade-section">
+    <section class="services-section py-5 text-dark  ">
         <div class="container">
-            <div class="text-center mb-4">
+            <!-- Section Header -->
+            <div class="text-center mb-4" data-aos="fade-down">
                 <h2 class="fw-bold">Our Services</h2>
-                <p class="text-dark">From brick work to complete home construction and design, we provide a
-                    comprehensive range of services to bring your vision to life with precision and excellence.</p>
+                <p class="text-dark">
+                    From brick work to complete home construction and design, we provide a comprehensive range of
+                    services to bring your vision to life with precision and excellence.
+                </p>
             </div>
 
-            <!-- our services -->
-            <div class="container my-5 text-center">
-                <div class="row g-4">
+            <!-- Top Row of Services -->
+            <div class="row g-4 justify-content-center">
 
-                    <!-- Brick Work -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100 shadow service-card">
-                            <div class="img-zoom-container">
-                                <img src="https://ik.imagekit.io/pritipri/KM%20Construction%20Media/brick.jpg?updatedAt=1749145253490"
-                                    class="card-img-top" alt="Brick Work" loading="lazy">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title fw-semibold">Brick Work</h5>
-                                <p class="card-text text-muted">Expert masonry for durable and beautiful structures
-                                    using
-                                    high-quality materials.</p>
-                            </div>
+                <!-- Brick Work -->
+                <div class="col-sm-6 col-lg-3" data-aos="fade-up">
+                    <div class="card h-100 shadow service-card">
+                        <div class="img-zoom-container">
+                            <img src="https://ik.imagekit.io/pritipri/KM%20Construction%20Media/brick.jpg?updatedAt=1749145253490"
+                                class="card-img-top" alt="Brick Work" loading="lazy">
                         </div>
-                    </div>
-
-                    <!-- Interior Design -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100 shadow service-card">
-                            <div class="img-zoom-container">
-                                <img src="assets/images/interior.jpg" class="card-img-top" alt="Interior Design"
-                                    loading="lazy">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title fw-semibold">Interior Design</h5>
-                                <p class="card-text text-muted">Customized interior planning with stylish layouts,
-                                    lighting, and finishes to match your space and vision.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Exterior Design -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100 shadow service-card">
-                            <div class="img-zoom-container">
-                                <img src="https://ik.imagekit.io/pritipri/KM%20Construction%20Media/exterior-design.jpg?updatedAt=1749145251961"
-                                    class="card-img-top" alt="Exterior Design" loading="lazy">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title fw-semibold">Exterior Design</h5>
-                                <p class="card-text text-muted">Give your property a stunning curb appeal with modern
-                                    and
-                                    creative exterior styles.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Home Layout -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100 shadow service-card">
-                            <div class="img-zoom-container">
-                                <img src="https://ik.imagekit.io/pritipri/KM%20Construction%20Media/layout.jpg?updatedAt=1749145254648"
-                                    class="card-img-top" alt="Home Layout" loading="lazy">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title fw-semibold">Home Layout (2D/3D)</h5>
-                                <p class="card-text text-muted">Custom 2D and 3D plans that bring your dream home to
-                                    life
-                                    with technical precision.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <br><br>
-                <div class="row g-3 justify-content-center">
-
-                    <!-- Front Elevation -->
-                    <div class="col-md-3 col-lg-3">
-                        <div class="card h-100 shadow service-card">
-                            <div class="img-zoom-container">
-                                <img src="https://ik.imagekit.io/pritipri/KM%20Construction%20Media/front-elevation.jpg?updatedAt=1749145253094"
-                                    class="card-img-top" alt="Brick Work" loading="lazy">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title fw-semibold">Front Elevation</h5>
-                                <p class="card-text text-muted">Modern and stylish elevation designs to give your home
-                                    or building a standout appearance.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Constrcution Equipment -->
-                    <div class="col-md-3 col-lg-3">
-                        <div class="card h-100 shadow service-card">
-                            <div class="img-zoom-container">
-                                <img src="https://ik.imagekit.io/pritipri/KM%20Construction%20Media/bulldozer.jpg?updatedAt=1749145253807"
-                                    class="card-img-top" alt="Interior Design" loading="lazy">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title fw-semibold">Equipment Rental</h5>
-                                <p class="card-text text-muted">Affordable rental services for bulldozers, tractors,
-                                    cement mixers, and water tankers for your site needs.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- On Site Material -->
-                    <div class="col-md-3 col-lg-3">
-                        <div class="card h-100 shadow service-card">
-                            <div class="img-zoom-container">
-                                <img src="https://ik.imagekit.io/pritipri/KM%20Construction%20Media/material-supply.jpg?updatedAt=1749145256314"
-                                    class="card-img-top" alt="Exterior Design" loading="lazy">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title fw-semibold">On-Site Material Delivery</h5>
-                                <p class="card-text text-muted">Timely delivery of essential construction materials
-                                    (sand, bricks, cement) directly to your worksite.</p>
-                            </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Brick Work</h5>
+                            <p class="card-text text-muted">Expert masonry for durable and beautiful structures using
+                                high-quality materials.</p>
                         </div>
                     </div>
                 </div>
+
+                <!-- Interior Design -->
+                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 shadow service-card">
+                        <div class="img-zoom-container">
+                            <img src="assets/images/interior.jpg" class="card-img-top" alt="Interior Design"
+                                loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Interior Design</h5>
+                            <p class="card-text text-muted">Customized interior planning with stylish layouts, lighting,
+                                and finishes to match your space and vision.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exterior Design -->
+                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 shadow service-card">
+                        <div class="img-zoom-container">
+                            <img src="https://ik.imagekit.io/pritipri/KM%20Construction%20Media/exterior-design.jpg?updatedAt=1749145251961"
+                                class="card-img-top" alt="Exterior Design" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Exterior Design</h5>
+                            <p class="card-text text-muted">Give your property a stunning curb appeal with modern and
+                                creative exterior styles.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Home Layout -->
+                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 shadow service-card">
+                        <div class="img-zoom-container">
+                            <img src="https://ik.imagekit.io/pritipri/KM%20Construction%20Media/layout.jpg?updatedAt=1749145254648"
+                                class="card-img-top" alt="Home Layout" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Home Layout (2D/3D)</h5>
+                            <p class="card-text text-muted">Custom 2D and 3D plans that bring your dream home to life
+                                with technical precision.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-        </div>
-        </div>
+            <!-- Spacer -->
+            <div class="my-5"></div>
 
+            <!-- Bottom Row of Services -->
+            <div class="row g-4 justify-content-center">
 
+                <!-- Front Elevation -->
+                <div class="col-sm-6 col-lg-3" data-aos="fade-right">
+                    <div class="card h-100 shadow service-card">
+                        <div class="img-zoom-container">
+                            <img src="https://ik.imagekit.io/pritipri/KM%20Construction%20Media/front-elevation.jpg?updatedAt=1749145253094"
+                                class="card-img-top" alt="Front Elevation" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Front Elevation</h5>
+                            <p class="card-text text-muted">Modern and stylish elevation designs to give your home or
+                                building a standout appearance.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Equipment Rental -->
+                <div class="col-sm-6 col-lg-3" data-aos="fade-up">
+                    <div class="card h-100 shadow service-card">
+                        <div class="img-zoom-container">
+                            <img src="https://ik.imagekit.io/pritipri/KM%20Construction%20Media/bulldozer.jpg?updatedAt=1749145253807"
+                                class="card-img-top" alt="Equipment Rental" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Equipment Rental</h5>
+                            <p class="card-text text-muted">Affordable rental services for bulldozers, tractors, cement
+                                mixers, and water tankers for your site needs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Material Delivery -->
+                <div class="col-sm-6 col-lg-3" data-aos="fade-left">
+                    <div class="card h-100 shadow service-card">
+                        <div class="img-zoom-container">
+                            <img src="https://ik.imagekit.io/pritipri/KM%20Construction%20Media/material-supply.jpg?updatedAt=1749145256314"
+                                class="card-img-top" alt="On-Site Material Delivery" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">On-Site Material Delivery</h5>
+                            <p class="card-text text-muted">Timely delivery of essential construction materials (sand,
+                                bricks, cement) directly to your worksite.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </section>
-
-    <section class="py-5 text-white fade-section" id="projects">
+    <section class="py-5 text-white  " id="projects">
         <div class="container">
-            <div class="text-center mb-5">
+            <!-- Section Header -->
+            <div class="text-center mb-5" data-aos="fade-down">
                 <h2 class="fw-bold">Our Projects</h2>
-                <p class="text-light">Explore some of the work we've done. From residential masterpieces to commercial
-                    marvels, our portfolio speaks for itself.</p>
+                <p class="text-light">
+                    Explore some of the work we've done. From residential masterpieces to commercial
+                    marvels, our portfolio speaks for itself.
+                </p>
             </div>
 
+            <!-- First Row -->
             <div class="row g-4">
                 <!-- Project Card 1 -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-sm-12 col-md-6 col-lg-4" data-aos="fade-up">
                     <div class="card project-card border-0 bg-light text-dark shadow position-relative overflow-hidden">
                         <div class="project-img-wrapper">
                             <img src="https://ik.imagekit.io/pritipri/KM%20Construction%20Media/project1.jpg?updatedAt=1749145256769"
-                                class="card-img-top" alt="Project 1" loading="lazy">
+                                class="card-img-top" alt="Project 1" loading="lazy" />
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-semibold">Modern Villa Construction</h5>
                         </div>
                         <div class="project-overlay d-flex justify-content-center align-items-center">
-                            <a href="#" class="btn btn-outline-light">View Project</a>
+                            <a href=" pages/projects.html" class="btn btn-outline-light">View Project</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project Card 2 -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-sm-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="card project-card border-0 bg-light text-dark shadow position-relative overflow-hidden">
                         <div class="project-img-wrapper">
                             <img src="https://ik.imagekit.io/pritipri/KM%20Construction%20Media/project2.jpg?updatedAt=1749145257865"
-                                class="card-img-top" alt="Project 2" loading="lazy">
+                                class="card-img-top" alt="Project 2" loading="lazy" />
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-semibold">Commercial Plaza</h5>
                         </div>
                         <div class="project-overlay d-flex justify-content-center align-items-center">
-                            <a href="#" class="btn btn-outline-light">View Project</a>
+                            <a href=" pages/projects.html" class="btn btn-outline-light">View Project</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project Card 3 -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-sm-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="card project-card border-0 bg-light text-dark shadow position-relative overflow-hidden">
                         <div class="project-img-wrapper">
                             <img src="https://ik.imagekit.io/pritipri/KM%20Construction%20Media/project3.jpg?updatedAt=1749145258781"
-                                class="card-img-top" alt="Project 3" loading="lazy">
+                                class="card-img-top" alt="Project 3" loading="lazy" />
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-semibold">Interior Design Showcase</h5>
                         </div>
                         <div class="project-overlay d-flex justify-content-center align-items-center">
-                            <a href="#" class="btn btn-outline-light">View Project</a>
+                            <a href=" pages/projects.html" class="btn btn-outline-light">View Project</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <br><br>
+            <!-- Spacer -->
+            <div class="my-5"></div>
 
+            <!-- Second Row -->
             <div class="row g-4">
-                <!-- Project Card 1 -->
-                <div class="col-md-6 col-lg-4">
+                <!-- Project Card 4 -->
+                <div class="col-sm-12 col-md-6 col-lg-4" data-aos="zoom-in">
                     <div class="card project-card border-0 bg-light text-dark shadow position-relative overflow-hidden">
                         <div class="project-img-wrapper">
                             <img src="https://ik.imagekit.io/pritipri/KM%20Construction%20Media/project4.jpg?updatedAt=1749145259030"
-                                class="card-img-top" alt="Project 1" loading="lazy">
+                                class="card-img-top" alt="Project 4" loading="lazy" />
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-semibold">Modern Villa Construction</h5>
+                            <h5 class="card-title fw-semibold">Luxury House Planning</h5>
                         </div>
                         <div class="project-overlay d-flex justify-content-center align-items-center">
-                            <a href="#" class="btn btn-outline-light">View Project</a>
+                            <a href=" pages/projects.html" class="btn btn-outline-light">View Project</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project Card 2 -->
-                <div class="col-md-6 col-lg-4">
+                <!-- Project Card 5 -->
+                <div class="col-sm-12 col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
                     <div class="card project-card border-0 bg-light text-dark shadow position-relative overflow-hidden">
                         <div class="project-img-wrapper">
                             <img src="https://ik.imagekit.io/pritipri/KM%20Construction%20Media/project4.jpg?updatedAt=1749145259030"
-                                class="card-img-top" alt="Project 2" loading="lazy">
+                                class="card-img-top" alt="Project 5" loading="lazy" />
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-semibold">Commercial Plaza</h5>
                         </div>
                         <div class="project-overlay d-flex justify-content-center align-items-center">
-                            <a href="#" class="btn btn-outline-light">View Project</a>
+                            <a href=" pages/projects.html" class="btn btn-outline-light">View Project</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project Card 3 -->
-                <div class="col-md-6 col-lg-4">
+                <!-- Project Card 6 -->
+                <div class="col-sm-12 col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
                     <div class="card project-card border-0 bg-light text-dark shadow position-relative overflow-hidden">
                         <div class="project-img-wrapper">
                             <img src="https://ik.imagekit.io/pritipri/KM%20Construction%20Media/project4.jpg?updatedAt=1749145259030"
-                                class="card-img-top" alt="Project 3" loading="lazy">
+                                class="card-img-top" alt="Project 6" loading="lazy" />
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-semibold">Interior Design Showcase</h5>
                         </div>
                         <div class="project-overlay d-flex justify-content-center align-items-center">
-                            <a href="#" class="btn btn-outline-light">View Project</a>
+                            <a href=" pages/projects.html" class="btn btn-outline-light">View Project</a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- View All Button -->
-            <div class="d-flex justify-content-end mt-4">
-                <a href="#" class="btn btn-outline-light">View All Projects</a>
+            <div class="d-flex justify-content-end mt-5" data-aos="fade-left">
+                <a href="pages/projects.html" class="btn btn-outline-light">View All Projects</a>
             </div>
         </div>
     </section>
 
-    <section class="py-5 fade-section" id="about-us">
-        <div class="container-fluid">
+
+    <section class="py-5   " id="about-us">
+        <div class="container">
             <div class="row align-items-center">
                 <!-- Left Image -->
-                <div class="col-md-6 mb-4 mb-md-0">
+                <div class="col-md-6 mb-4 mb-md-0 " data-aos="fade-right">
                     <img src="https://ik.imagekit.io/pritipri/KM%20Construction%20Media/Carousal1.jpg?updatedAt=1749145254120"
                         alt="About KM Construction" class="img-fluid rounded shadow" loading="lazy">
                 </div>
 
                 <!-- Right Text Content -->
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-left">
                     <h2 class="fw-bold">Who We Are</h2>
                     <p class="text-muted">
-                        KM Construction is a trusted construction firm delivering excellence in every brick laid and
-                        beam raised. With a deep commitment to quality, we specialize in turning architectural dreams
-                        into reality.
+                        <strong>KM Construction</strong> is a rising construction firm based in <strong>Raipur,
+                            Chhattisgarh</strong>, known for building high-quality, modern residential spaces with
+                        precision and purpose. Founded in <strong>2024</strong>, we are committed to transforming your
+                        vision of a dream home into a structurally sound and visually stunning reality.
+                    </p>
+                    <p class="text-muted">
+                        In a short span, we have completed <strong>6–7 premium residential projects</strong>, setting
+                        new benchmarks in design and delivery. At KM Construction, every brick we lay is a promise of
+                        excellence, durability, and integrity.
                     </p>
 
                     <div class="row mt-4">
@@ -391,9 +427,9 @@
                         <div class="col-6">
                             <div class="card border-0 shadow-sm h-100">
                                 <div class="card-body">
-                                    <h6 class="fw-semibold">10+ Years Experience</h6>
-                                    <p class="text-muted small mb-0">We bring a decade of construction expertise to
-                                        every project we handle.</p>
+                                    <h6 class="fw-semibold">Founded in 2024</h6>
+                                    <p class="text-muted small mb-0">Backed by modern engineering and a passion for
+                                        construction innovation.</p>
                                 </div>
                             </div>
                         </div>
@@ -401,20 +437,20 @@
                         <div class="col-6">
                             <div class="card border-0 shadow-sm h-100">
                                 <div class="card-body">
-                                    <h6 class="fw-semibold">100+ Projects</h6>
-                                    <p class="text-muted small mb-0">From homes to high-rises, our work spans diverse
-                                        residential and commercial projects.</p>
+                                    <h6 class="fw-semibold">6+ Residential Projects</h6>
+                                    <p class="text-muted small mb-0">Successfully delivered premium housing solutions
+                                        across Raipur.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <a href="#" class="btn btn-outline-dark mt-4">Learn More About Us</a>
+                    <a href="pages/about.html" class="btn btn-outline-dark mt-4">Learn More About Us</a>
                 </div>
             </div>
         </div>
-        </div>
     </section>
+
 
     <section class="faq-section container-fluid">
         <div class="faq-body container">
@@ -586,6 +622,13 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 </body>
 
 </html>
